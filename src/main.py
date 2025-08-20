@@ -1,5 +1,5 @@
-print("ยินดีต้อนรับสู่โปรแกรม Battleship Game")
-print("พิมพ์ 'quit' เพื่อออกจากโปรแกรม")
+print("Battleship")
+print("Welcome to this game")
 
 #ทำงานซ้ำ
 while True:
