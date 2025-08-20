@@ -1,4 +1,4 @@
-print("Battleship")
+print("Battleship Game")
 print("Welcome to this game")
 
 #ทำงานซ้ำ
