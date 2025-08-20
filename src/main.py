@@ -1,5 +1,4 @@
-print("Battleship")
-
+print("Battleship Game")
 print("Welcome to this game")
 
 #ทำงานซ้ำ
@@ -19,6 +18,4 @@ while True:
         break
     else:
         print("คำสั่งไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง")
-=======
-print("Welcome to this game")
 
