@@ -19,9 +19,9 @@ class BoardGame:
         Prints the game board to the console.
         """
         board_to_print = self.ships_board
-        print("  " + " ".join("ABCDEFGHIJ"))
+        print(" " + "\t".join("ABCDEFGHIJ"))
         for i, row in enumerate(board_to_print):
-            print(f"{i+1:<2}" + " ".join(row))
+            print(f"{i+1:<2}" + "\t".join(row))
         print(self.ships_position)
             
     def place_ships_randomly(self):
@@ -58,13 +58,16 @@ class BoardGame:
         Returns:
             bool: True if the shot was a hit, False otherwise.
         """
+        RED = "\033[31m"
+        GREEN = "\033[32m"
+        RESET = "\033[0m"
         for ship_name,position in self.ships_position.items():
             if (row,col) in position:
                 for r,c in position:
-                    self.ships_board[r][c] = 'H'
+                    self.ships_board[r][c] = f'{GREEN}H{RESET}'
                 del self.ships_position[ship_name]
                 return True
-        self.ships_board[row][col] = 'M'
+        self.ships_board[row][col] = f'{RED}M{RESET}'
         return False
         
     def all_ships_sunk(self)->bool:
